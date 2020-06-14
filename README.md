@@ -21,8 +21,8 @@ As “certified” fake news is a rare commodity, and we wanted to get as much t
 
 <p align="center">
   <img src="https://github.com/d-roland/Fake-news-detection/blob/master/.ipynb_checkpoints/WordCloud_real.png?raw=true" alt="Word Cloud of Real news"/>
-</p>
 Word Cloud of Real news
+</p>
 
 ![alt text](https://github.com/d-roland/Fake-news-detection/blob/master/.ipynb_checkpoints/WordCloud_fake.png?raw=true)\
 Word Cloud of Fake news
