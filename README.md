@@ -1,11 +1,11 @@
 # Fake-news-detection
 
-## 1. Task definition \n
+## 1. Task definition
 Fake news is a growing concern in our society. In a study led by NYU and Stanford [1], the majority of participants turned out to be really good at identifying “true news”. However,  when it came to inauthentic, or fake, news, even the most confident among them had difficulties spotting the signs and rejecting made-up facts, even when given the opportunity to fact-check them online.
 We decided to study how machine learning can help better spot the signs of fake news, notably via an in-depth analysis and utilization of features extracted from news content. We designed various classifiers of news articles to help readers spot fake ones. As input, they take text from the article, and output a class (“fake” or “true”). We compared their results and sensitivity to features change, to bring to light some hidden characteristics of fake news content.
 
 
-2. Literature review
+## 2. Literature review
 Fake News classification has been a popular topic in the past few years, and two main approaches emerged, as referenced in [2]: either relying on news content (often used for traditional news), or on auxiliary information such as context (relevant for social media news).
 For news content based approaches, features are generally extracted as linguistic-based and visual-based. Linguistic-based features capture specific characteristics of fake news based on document organizations from different levels, such as characters, words, sentences. They are typically categorized as lexical or syntactic features [3]. Another related approach, style-based, aims at capturing the manipulator's specific writing styles and sensational headlines that commonly occur in fake news content, such as deception [4] and non-objectivity [3].
 
@@ -13,7 +13,7 @@ As new computational algorithms have been improved, the models for fake news det
 Within Stanford, a few AI projects took a stab at this topic as well. In particular, the Fake News Detection project [8] trained several Neural Networks (such as a DNN+BERT model) to classify news and tweets, and managed to obtain an Accuracy of 0.84 and a F1 Score of 0.89 on their Test set with their best model. Also, the DeepNewsNet project [9] trained and evaluated various NN (FC, LSTM, hybrid) on the LIAR dataset, and used Sentiment distribution predictions to improve their model. In both cases, the project focused on comparing models, not on analyzing which features impacted the most the prediction.
  
  
-3. Dataset
+## 3. Dataset
 We chose two existing datasets related to fake news, both from Kaggle: Fake vs. Real News Dataset [10] and FakeNewsNet Dataset [11].
 This first dataset was collected from verified news articles. The truthful articles were obtained by crawling articles from Reuters.com. As for the fake news articles, they were collected from different sources, mostly unreliable websites flagged by Politifact. The dataset contains different types of articles; however, the majority focus on political and World news topics. 
 The second dataset is a repository for an ongoing data collection project for fake news research at ASU. Like in the first dataset, fake news was collected from different websites flagged as unreliable, and most of the news are related to political and World news topics.
@@ -45,14 +45,14 @@ After this step of data cleaning, we managed to get 22256 fake news and 21323 re
 From this, we constructed our training, validation, and testing sets by taking a random sample of 70% (~30k examples), 15% (~7k examples), and 15% (~7k examples) of all articles, respectively.
  
  
-4. Oracle and Baseline
+## 4. Oracle and Baseline
 We generated an original oracle for our future classifier by randomly sampling 25 articles and having both team members guess whether each was fake or real news. Each of us was accurate 84% of the time. If we combined our answers and picked the correct answer out of our guesses, we’d have a (maximum) accuracy of 88%; if we picked the wrong answer out of the two, we’d have an (minimum) accuracy of 80%. We then generated an expanded oracle, classifying 50 unique articles each. One of us got precision, recall, and F1 scores of 78%, and the other got a score of 94% for the three. On average, we got a weighted average score of 86% for the three. From these oracles, we can see that a human classifier receives precision, recall, and F1 scores of between 84% and 86%. Our results are above.
  
 Now that we have an understanding of human performance on a small number of examples, we aim to establish a baseline for our classifier. To that extent, we selected 2 simple classifiers: multinomial Naïve Bayes and linear SVM.
 In order to feed our inputs into untrained models, we needed to vectorize them. Word vectors are numerical representations of words, which became a critical component of NLP by their ability to extract meaningful characteristics of texts (such as word similarity, gender, frequency, etc.). The traditional classifiers work with word bags such as TF-IDF (term frequency-inverse document frequency) embeddings, which evaluates a word’s importance within a set of documents based on its frequency. This is done by multiplying two metrics: how many times a word appears in a specific document, and the inverse document frequency of the word across a set of documents. We implemented the two classifiers via the Scikit Learn library, with their standard setup options.
  
  
-5. Main approach 
+## 5. Main approach 
 We developed a 3-phase approach:
 
 A/ Preprocessing: beyond the basic preprocessing steps performed on the dataset (special characters removal, tokenization, lemmatization), we investigated more specific ones given the linguistic structure of our data. Namely, we inspected word-level and sentence-level features (total number of words, unique words, frequency, etc.), comparing both fake & real corpus, and adjusting the dataset accordingly to further balance it. 
@@ -67,12 +67,12 @@ C/ Feature analysis: based on our trained models, we intended to investigate whi
 Finally, we performed sentiment analysis on our dataset, using two libraries based on a bag of words classifier: NLTK Vader, which leverages some heuristics to intensify or negate a sentence’s sentiment, and TextBlob, which also permits Subjectivity analysis (how factually based/opinionated a piece of text is).
  
  
-6. Evaluation metric
+## 6. Evaluation metric
 During the whole project, we focused on Accuracy, Precision, Recall and F1 Score. Since our dataset was balanced between both classes, Accuracy was our metric of reference. It describes the similarity of articles we classified correctly to fake news. 
 In addition, Precision measures the proportion of classified fake news that we got correct (true positives). However, because fake news datasets are usually skewed, high precision can be achieved by rarely making positive predictions. A metric that compliments this weakness is Recall, which measures the fraction of fake news that is predicted to be fake news. F1 combines precision and recall, providing an encompassing, descriptive metric.
 
  
-7. Results & Analysis
+## 7. Results & Analysis
 Based on our initial preprocessing described in 3 and 5A, we observed the following results:
 
 
@@ -155,7 +155,7 @@ The first graph (made with NLTK Vader) clearly shows that the content of Fake ne
 These observations aren’t really surprising: people writing fake news may be tempted to use more emotional vocabulary and tone, in order to reinforce the intensity of their claim and ultimately convince. To some extent, this could be perceived as manipulation.
 
 
-8. Conclusion and Future Work
+## 8. Conclusion and Future Work
  
 Our experiment was highly dependent on the specific datasets we managed to collect, and we made the choice to focus our work solely on the text content. In the real world, fake news takes many forms and, notably in social networks, requires analyzing both content, user and context to classify them correctly. To counteract this limitation, we implemented several, thorough methods of cleaning our dataset, from lemmatization to standardizing vocabulary.
  
@@ -168,7 +168,7 @@ Our code is available on this Colab and this Github:
 https://github.com/d-roland/Fake-news-detection/blob/master/CS221_Fake_news_detection.ipynb 
 
 
-9. References
+## 9. References
 [1] The uncomfortable truth about fake news - Financial Times / Feb 2020
 [2] Fake News Detection on Social Media: A Data Mining Perspective - Kai Shu, Amy Sliva, Suhang Wang, Jiliang Tang, Huan Liun - arXiv:1708.01967 / Aug 2017
 [3] A Stylometric Inquiry into Hyperpartisan and Fake News - Martin Potthast, Johannes Kiesel, Kevin Reinartz, Janek Bevendorff, and Benno Stein - arXiv:1702.05638 / 2017.
