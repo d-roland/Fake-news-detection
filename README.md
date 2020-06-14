@@ -31,8 +31,8 @@ We verified that this initial step worked properly by inspecting the most common
 Initial distribution of number of words per news\
 ![alt text](https://github.com/d-roland/Fake-news-detection/blob/master/.ipynb_checkpoints/Corpus_distribution.png?raw=true)
 
-Initial total unique words in:\
-   * Real news: 67162\
+Initial total unique words in:
+   * Real news: 67162
    * Fake news: 88722
 
 Common unique words: 39116
