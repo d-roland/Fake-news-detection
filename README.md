@@ -20,7 +20,8 @@ The second dataset is a repository for an ongoing data collection project for fa
 As “certified” fake news is a rare commodity, and we wanted to get as much training data as possible, we decided to merge them. 
 
 <p align="center">
-  <img src="https://github.com/d-roland/Fake-news-detection/blob/master/.ipynb_checkpoints/WordCloud_real.png?raw=true" alt="Word Cloud of Real news"/>\
+  <img src="https://github.com/d-roland/Fake-news-detection/blob/master/.ipynb_checkpoints/WordCloud_real.png?raw=true" alt="Word Cloud of Real news"/>
+ 
 Word Cloud of Real news
 </p>
 
