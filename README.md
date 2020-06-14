@@ -1,6 +1,6 @@
 # Fake-news-detection
 
-1. Task definition 
+## 1. Task definition \n
 Fake news is a growing concern in our society. In a study led by NYU and Stanford [1], the majority of participants turned out to be really good at identifying “true news”. However,  when it came to inauthentic, or fake, news, even the most confident among them had difficulties spotting the signs and rejecting made-up facts, even when given the opportunity to fact-check them online.
 We decided to study how machine learning can help better spot the signs of fake news, notably via an in-depth analysis and utilization of features extracted from news content. We designed various classifiers of news articles to help readers spot fake ones. As input, they take text from the article, and output a class (“fake” or “true”). We compared their results and sensitivity to features change, to bring to light some hidden characteristics of fake news content.
 
