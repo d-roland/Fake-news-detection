@@ -23,7 +23,8 @@ As “certified” fake news is a rare commodity, and we wanted to get as much t
 Word Cloud of Real news
 
 ![alt text](https://github.com/d-roland/Fake-news-detection/blob/master/.ipynb_checkpoints/WordCloud_fake.png?raw=true)\
-Word Cloud of Fake news\
+Word Cloud of Fake news
+
 Our first step was to preprocess the data. To start, we standardized our datasets by removing all other information (images, videos, etc.) besides the title and body text of the articles. We then merged each title with their body texts, converted the text to lowercase, tokenized and lemmatized our input, removed stop words, punctuation and special characters using NLTK library and custom routines. We also suppressed several words with high frequency (up to 15 most frequent words per class) and too easy to classify (urls, hashtags, references).\
 We verified that this initial step worked properly by inspecting the most common unigrams and bigrams, as well as Five-number summary and linguistic structure of both real and fake corpus. We noticed that fake news was mostly longer than real ones, and used a larger vocabulary.
 
@@ -126,18 +127,18 @@ We’d also be keen to integrate to our existing dataset real and fake news rela
 
 
 ## 9. References
-[1] The uncomfortable truth about fake news - Financial Times / Feb 2020
-[2] Fake News Detection on Social Media: A Data Mining Perspective - Kai Shu, Amy Sliva, Suhang Wang, Jiliang Tang, Huan Liun - arXiv:1708.01967 / Aug 2017
-[3] A Stylometric Inquiry into Hyperpartisan and Fake News - Martin Potthast, Johannes Kiesel, Kevin Reinartz, Janek Bevendorff, and Benno Stein - arXiv:1702.05638 / 2017.
-[4] Automatic deception detection: Methods for finding fake news. Proceedings of the Association for Information Science and Technology, 52(1):1–4 - Niall J Conroy, Victoria L Rubin, and Yimin Chen / 2015.
-[5] BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova - arXiv:1810.04805 / 2019.
-[6] Detecting Fake News with Capsule Neural Networks - Mohammad Hadi Goldani, Saeedeh Momtazi, Reza Safabakhsh / Feb 2020
-[7] Efficient Estimation of Word Representations in Vector Space - Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean - arXiv:1301.3781v3 / 2013
-[8] Fake News Detection project - CS230 / Fall 2019
-[9] DeepNewsNet project - CS230 / Winter 2019
-[10] Fake vs. Real News Dataset - Kaggle - Detecting opinion spams and fake news using text
-classification”, Journal of Security and Privacy, Volume 1, Issue 1, Wiley - Ahmed H, Traore I, Saad S / February 2018
-[11] FakeNewsNet Dataset - Kaggle - A Data Repository with News Content, Social Context and Dynamic Information for Studying Fake News on Social Media - Shu, Kai and Mahudeswaran, Deepak and Wang, Suhang and Lee, Dongwon and Liu, Huan - arXiv:1809.01286 / 2018
-[12] Long Short-term Memory - Sepp Hochreiter, Jurgen Schmidhuber - Neural Computation 1735-1780 / 1997
-[13] Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation -  Wu & al. - arXiv:1609.08144 / 2016
+[1] The uncomfortable truth about fake news - Financial Times / Feb 2020\
+[2] Fake News Detection on Social Media: A Data Mining Perspective - Kai Shu, Amy Sliva, Suhang Wang, Jiliang Tang, Huan Liun - arXiv:1708.01967 / Aug 2017\
+[3] A Stylometric Inquiry into Hyperpartisan and Fake News - Martin Potthast, Johannes Kiesel, Kevin Reinartz, Janek Bevendorff, and Benno Stein - arXiv:1702.05638 / 2017.\
+[4] Automatic deception detection: Methods for finding fake news. Proceedings of the Association for Information Science and Technology, 52(1):1–4 - Niall J Conroy, Victoria L Rubin, and Yimin Chen / 2015.\
+[5] BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova - arXiv:1810.04805 / 2019.\
+[6] Detecting Fake News with Capsule Neural Networks - Mohammad Hadi Goldani, Saeedeh Momtazi, Reza Safabakhsh / Feb 2020\
+[7] Efficient Estimation of Word Representations in Vector Space - Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean - arXiv:1301.3781v3 / 2013\
+[8] Fake News Detection project - CS230 / Fall 2019\
+[9] DeepNewsNet project - CS230 / Winter 2019\
+[10] Fake vs. Real News Dataset - Kaggle - Detecting opinion spams and fake news using text\
+classification”, Journal of Security and Privacy, Volume 1, Issue 1, Wiley - Ahmed H, Traore I, Saad S / February 2018\
+[11] FakeNewsNet Dataset - Kaggle - A Data Repository with News Content, Social Context and Dynamic Information for Studying Fake News on Social Media - Shu, Kai and Mahudeswaran, Deepak and Wang, Suhang and Lee, Dongwon and Liu, Huan - arXiv:1809.01286 / 2018\
+[12] Long Short-term Memory - Sepp Hochreiter, Jurgen Schmidhuber - Neural Computation 1735-1780 / 1997\
+[13] Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation -  Wu & al. - arXiv:1609.08144 / 2016\
 [14] BERT Explained: State of the art language model for NLP - Rani Horev - Medium towards data science, 2018
