@@ -19,11 +19,8 @@ This first dataset was collected from verified news articles. The truthful artic
 The second dataset is a repository for an ongoing data collection project for fake news research at ASU. Like in the first dataset, fake news was collected from different websites flagged as unreliable, and most of the news are related to political and World news topics.
 As “certified” fake news is a rare commodity, and we wanted to get as much training data as possible, we decided to merge them. 
 
-<p align="center">
-  <img src="https://github.com/d-roland/Fake-news-detection/blob/master/.ipynb_checkpoints/WordCloud_real.png?raw=true" alt="Word Cloud of Real news"/>
- 
+![alt text](https://github.com/d-roland/Fake-news-detection/blob/master/.ipynb_checkpoints/WordCloud_real.png?raw=true)\
 Word Cloud of Real news
-</p>
 
 ![alt text](https://github.com/d-roland/Fake-news-detection/blob/master/.ipynb_checkpoints/WordCloud_fake.png?raw=true)\
 Word Cloud of Fake news
