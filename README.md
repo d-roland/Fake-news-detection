@@ -32,8 +32,8 @@ Initial distribution of number of words per news\
 ![alt text](https://github.com/d-roland/Fake-news-detection/blob/master/.ipynb_checkpoints/Corpus_distribution.png?raw=true)
 
 Initial total unique words in:\
-   Real news: 67162\
-   Fake news: 88722
+   * Real news: 67162\
+   * Fake news: 88722
 
 Common unique words: 39116
 
@@ -139,6 +139,6 @@ We’d also be keen to integrate to our existing dataset real and fake news rela
 [10] Fake vs. Real News Dataset - Kaggle - Detecting opinion spams and fake news using text\
 classification”, Journal of Security and Privacy, Volume 1, Issue 1, Wiley - Ahmed H, Traore I, Saad S / February 2018\
 [11] FakeNewsNet Dataset - Kaggle - A Data Repository with News Content, Social Context and Dynamic Information for Studying Fake News on Social Media - Shu, Kai and Mahudeswaran, Deepak and Wang, Suhang and Lee, Dongwon and Liu, Huan - arXiv:1809.01286 / 2018\
-[12] Long Short-term Memory - Sepp Hochreiter, Jurgen Schmidhuber - Neural Computation 1735-1780 / 1997\
+[12] Long Short-term Memory - Sepp Hochreiter, Jurgen Schmidhuber - Neural Computation 1735-1780 / 1997\
 [13] Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation -  Wu & al. - arXiv:1609.08144 / 2016\
 [14] BERT Explained: State of the art language model for NLP - Rani Horev - Medium towards data science, 2018
